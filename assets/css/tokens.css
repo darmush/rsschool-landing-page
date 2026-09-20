@@ -1,0 +1,10 @@
+@layer tokens, base;
+
+@layer tokens {
+    :root {
+        --font-sans: "Inter", "Arimo", "Helvetica Neue", Arial, sans-serif;
+
+        --paper: #FAFAFA;
+        --ink: #1C1C1C;
+    }
+}
