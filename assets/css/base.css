@@ -92,6 +92,7 @@
         text-transform: uppercase;
     }
 
+    /* ex. caps for navigation */
     .ui-caps {
         font-size: 13px;
         line-height: 1.2;
