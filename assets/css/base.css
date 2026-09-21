@@ -72,7 +72,7 @@
         color: var(--ink-muted);
     }
 
-    .inverse .muted {
+    .section--inverse .muted {
         color: var(--on-graphite-muted);
     }
 

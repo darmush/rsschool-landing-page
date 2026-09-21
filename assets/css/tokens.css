@@ -1,4 +1,4 @@
-@layer tokens, base, layouts, components;
+@layer tokens, base, layouts, components, sections;
 
 @layer tokens {
     :root {
@@ -9,6 +9,10 @@
         --ink: #1C1C1C;
         --ink-muted: #5E5E5E;
         --line-soft: #CFCFCF;
+        --graphite: #232323;
+        --on-graphite: #FAFAFA;
+        --on-graphite-muted: #B3B3B3;
+        --on-graphite-subtle: #909090;
 
         color-scheme: light;
 
@@ -29,8 +33,8 @@
         --container-max: 1344px;
         --card-w: 300px;
 
-        /* for 480px and above */
-        --cols: 4;
+        /* for desktop */
+        --cols: 12;
         --margin: 16px;
         --gutter: 12px;
         --section-y: 40px;
@@ -54,23 +58,25 @@
         --fs-body-s: 14px;
         --fs-label: 12px;
 
-        @media (min-width: 1200px) {
-            :root {
-                --margin: 48px;
-                --gutter: 24px;
-                --section-y-dark: 96px;
-                --head-gap: 48px;
-                --nav-gap: 40px;
-                --heading-w: 760px;
 
-                --fs-xl: 80px;
-                --lh-xl: .98;
-                --fs-l: 64px;
-                --lh-l: 1.02;
-                --fs-m: 48px;
-                --fs-title: 28px;
-                --fs-number-xl: 56px;
-            }
+    }
+
+    @media (min-width: 1200px) {
+        :root {
+            --margin: 48px;
+            --gutter: 24px;
+            --section-y-dark: 96px;
+            --head-gap: 48px;
+            --nav-gap: 40px;
+            --heading-w: 760px;
+
+            --fs-xl: 80px;
+            --lh-xl: .98;
+            --fs-l: 64px;
+            --lh-l: 1.02;
+            --fs-m: 48px;
+            --fs-title: 28px;
+            --fs-number-xl: 56px;
         }
     }
 }
