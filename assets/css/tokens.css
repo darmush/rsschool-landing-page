@@ -1,10 +1,76 @@
-@layer tokens, base;
+@layer tokens, base, layouts, components;
 
 @layer tokens {
     :root {
         --font-sans: "Inter", "Arimo", "Helvetica Neue", Arial, sans-serif;
 
         --paper: #FAFAFA;
+        --paper-alt: #F0F0F0;
         --ink: #1C1C1C;
+        --ink-muted: #5E5E5E;
+        --line-soft: #CFCFCF;
+
+        color-scheme: light;
+
+        --space-1: 4px;
+        --space-2: 8px;
+        --space-3: 12px;
+        --space-4: 16px;
+        --space-5: 24px;
+        --space-6: 32px;
+        --space-7: 48px;
+        --space-8: 64px;
+        --space-9: 96px;
+        --space-10: 128px;
+        --stroke-hairline: 1px;
+        --stroke-strong: 2px;
+        --radius-0: 0;
+        --radius-full: 999px;
+        --container-max: 1344px;
+        --card-w: 300px;
+
+        /* for 480px and above */
+        --cols: 4;
+        --margin: 16px;
+        --gutter: 12px;
+        --section-y: 40px;
+        --section-y-dark: 48px;
+        --head-gap: 24px;
+        --nav-gap: 28px;
+        --heading-w: 100%;
+
+        /* font-size (fs) and line-height (lh) variables */
+        --fs-xl: 40px;
+        --lh-xl: 1.02;
+        --fs-l: 34px;
+        --lh-l: 1.05;
+        --fs-m: 30px;
+        --lh-m: 1.08;
+
+        --fs-title: 22px;
+        --fs-number-xl: 48px;
+        --fs-number-l: 24px;
+        --fs-body-l: 18px;
+        --fs-body-s: 14px;
+        --fs-label: 12px;
+
+        @media (min-width: 1200px) {
+            :root {
+                --margin: 48px;
+                --gutter: 24px;
+                --section-y-dark: 96px;
+                --head-gap: 48px;
+                --nav-gap: 40px;
+                --heading-w: 760px;
+
+                --fs-xl: 80px;
+                --lh-xl: .98;
+                --fs-l: 64px;
+                --lh-l: 1.02;
+                --fs-m: 48px;
+                --fs-title: 28px;
+                --fs-number-xl: 56px;
+            }
+        }
     }
 }

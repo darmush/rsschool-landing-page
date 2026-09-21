@@ -19,6 +19,10 @@
           href="assets/css/tokens.css">
     <link rel="stylesheet"
           href="assets/css/base.css">
+    <link rel="stylesheet"
+          href="assets/css/layouts.css">
+    <link rel="stylesheet"
+          href="assets/css/components.css">
     <link rel="icon"
           type="image/x-icon"
           href="favicon.ico">
@@ -46,11 +50,11 @@
         </symbol>
     </svg>
 
-    <header>
+    <header class="header">
         <div class="container">
             <a class="logo"
                href="./">stekacheva</a>
-            <nav class="navigation"
+            <nav class="navigation ui-caps"
                  aria-label="Основное меню">
                 <ul class="menu">
                     <li><a href="#formats">Форматы</a></li>
@@ -61,30 +65,32 @@
             </nav>
             <button class="theme-toggle"
                     type="button"
+                    aria-checked="false"
                     aria-label="Переключить тему"></button>
             <button class="burger"
                     type="button"
                     aria-label="Открыть меню"
-                    aria-expanded="false"></button>
+                    aria-expanded="false"><span></span><span></span></button>
+
         </div>
     </header>
     <main>
         <section id="hero">
             <div class="container">
-                <h1 class="">
-                    <span class="">Кадры, к которым</span>
-                    <em class="">хочется возвращаться</em>
+                <h1 class="title title--xl">
+                    <span class="title__primary">Кадры, к которым</span>
+                    <em class="title__secondary">хочется возвращаться</em>
                 </h1>
-                <div class="">
-                    <div class="">
-                        <p class="">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <p class="hero-description">
                             Потому что в них остаются не платье и не поза, а море, ветер и то, как вам было
                             хорошо в этот день.
                         </p>
-                        <p class="">
+                        <p class="hero-intro">
                             Привет! Меня зовут Алина и я фотограф в Батуми.
                         </p>
-                        <a class=""
+                        <a class="btn"
                            href="#contacts">Записаться на съёмку</a>
                     </div>
                     <div class="photo"></div>
@@ -96,12 +102,14 @@
             <div class="container">
                 <div class="">
                     <h2 class="title">
-                        <span class="">Опыт, который</span>
-                        <em class="">видно в кадре</em>
+                        <span class="title__primary">Опыт, который</span>
+                        <em class="title__secondary">видно в кадре</em>
                     </h2>
 
-                    <p class="">Это моя профессия уже больше пяти лет. Я знаю, как показать человека красивым, и
-                        результат вы увидите в каждом кадре. Подскажу вам позы и проведу по маршруту, чтобы вы не думали
+                    <p class="about-description">Это моя профессия уже больше пяти лет. Я знаю, как показать человека
+                        красивым, и
+                        результат вы увидите в каждом кадре. Подскажу как позировать и проведу по маршруту, чтобы вы не
+                        думали
                         о съёмке, а наслаждались моментом.</p>
                 </div>
                 <div class="photo"></div>
@@ -111,11 +119,11 @@
         <section id="formats">
             <div class="container">
                 <h2 class="title">
-                    <span class="">Форматы и</span>
-                    <em class="">стоимость</em>
+                    <span class="title__primary">Форматы и</span>
+                    <em class="title__secondary">стоимость</em>
                 </h2>
-                <div class="">
-                    <span class="">01 / 06</span>
+                <div class="format-controls">
+                    <span class="format-indicator">01 / 06</span>
                     <button class="icon-btn"
                             type="button"
                             aria-label="Предыдущий формат"><svg class="icon-arrow"
@@ -131,16 +139,16 @@
                 </div>
 
                 <div class="carousel">
-                    <ul class="">
+                    <ul class="carousel-list">
                         <li>
                             <article class="">
                                 <div class=""><span class="label">01</span><span>1–1,5&nbsp;ч</span></div>
-                                <h3 class="">Индивидуальная</h3>
-                                <div class="">
-                                    <p class="">Портрет для себя</p>
+                                <h3 class="carousel-title">Индивидуальная</h3>
+                                <div class="carousel-description">
+                                    <p class="carousel-text">Портрет для себя</p>
                                 </div>
-                                <div class="">
-                                    <p class=""><span>300&nbsp;<small>GEL</small></span></p>
+                                <div class="carousel-footer">
+                                    <p class="carousel-price"><span>300&nbsp;<small>GEL</small></span></p>
                                     <a class="btn"
                                        href="#contacts"
                                        aria-label="Записаться на индивидуальную фотосессию">Записаться</a>
@@ -149,13 +157,14 @@
                         </li>
                         <li>
                             <article class="">
-                                <div class=""><span class="label">02</span><span class="">1–1,5&nbsp;ч</span></div>
-                                <h3 class="">Парная</h3>
-                                <div class="">
-                                    <p class="">Love story, с подругой, с ребёнком</p>
+                                <div class=""><span class="label">02</span><span
+                                          class="carousel-duration">1–1,5&nbsp;ч</span></div>
+                                <h3 class="carousel-title">Парная</h3>
+                                <div class="carousel-description">
+                                    <p class="carousel-text">Love story, с подругой, с ребёнком</p>
                                 </div>
-                                <div class="">
-                                    <p class=""><span>330&nbsp;<small>GEL</small></span></p>
+                                <div class="carousel-footer">
+                                    <p class="carousel-price"><span>330&nbsp;<small>GEL</small></span></p>
                                     <a class="btn"
                                        href="#contacts"
                                        aria-label="Записаться на парную фотосессию">Записаться</a>
@@ -164,13 +173,14 @@
                         </li>
                         <li>
                             <article class="">
-                                <div class=""><span class="label">03</span><span class="">2&nbsp;ч</span></div>
-                                <h3 class="">Свадьба для двоих</h3>
-                                <div class="">
-                                    <p class="">Роспись, фото с гостями, прогулка вдвоём</p>
+                                <div class=""><span class="label">03</span><span
+                                          class="carousel-duration">2&nbsp;ч</span></div>
+                                <h3 class="carousel-title">Свадьба для двоих</h3>
+                                <div class="carousel-description">
+                                    <p class="carousel-text">Роспись, фото с гостями, прогулка вдвоём</p>
                                 </div>
-                                <div class="">
-                                    <p class=""><span>500&nbsp;<small>GEL</small></span></p>
+                                <div class="carousel-footer">
+                                    <p class="carousel-price"><span>500&nbsp;<small>GEL</small></span></p>
                                     <a class="btn"
                                        href="#contacts"
                                        aria-label="Записаться на свадебную фотосессию">Записаться</a>
@@ -179,14 +189,15 @@
                         </li>
                         <li>
                             <article class="">
-                                <div class=""><span class="label">04</span><span class="">4–8&nbsp;ч</span></div>
-                                <h3 class="">Свадебная репортажная</h3>
-                                <div class="">
-                                    <p class="">Съёмка свадебного дня целиком</p>
-                                    <p class="">Стоимость обсуждается индивидуально</p>
+                                <div class=""><span class="label">04</span><span
+                                          class="carousel-duration">4–8&nbsp;ч</span></div>
+                                <h3 class="carousel-title">Свадебная репортажная</h3>
+                                <div class="carousel-description">
+                                    <p class="carousel-text">Съёмка свадебного дня целиком</p>
+                                    <p class="carousel-text">Стоимость обсуждается индивидуально</p>
                                 </div>
-                                <div class="">
-                                    <p class=""><span>По часам</span></p>
+                                <div class="carousel-footer">
+                                    <p class="carousel-price"><span>По часам</span></p>
                                     <a class="btn"
                                        href="#contacts"
                                        aria-label="Обсудить съёмку свадьбы">Обсудить съёмку</a>
@@ -195,13 +206,14 @@
                         </li>
                         <li>
                             <article class="">
-                                <div class=""><span class="label">05</span><span class="">1–1,5&nbsp;ч</span></div>
-                                <h3 class="">Семейная / групповая</h3>
-                                <div class="">
-                                    <p class="">3–5 человек</p>
+                                <div class=""><span class="label">05</span><span
+                                          class="carousel-duration">1–1,5&nbsp;ч</span></div>
+                                <h3 class="carousel-title">Семейная / групповая</h3>
+                                <div class="carousel-description">
+                                    <p class="carousel-text">3–5 человек</p>
                                 </div>
-                                <div class="">
-                                    <p class=""><span>350&nbsp;<small>GEL</small></span></p>
+                                <div class="carousel-footer">
+                                    <p class="carousel-price"><span>350&nbsp;<small>GEL</small></span></p>
                                     <a class="btn"
                                        href="#contacts"
                                        aria-label="Записаться на групповую фотосессию">Записаться</a>
@@ -211,12 +223,13 @@
                         <li>
                             <article class="">
                                 <div class=""><span class="label">06</span></div>
-                                <h3 class="">Сертификат</h3>
-                                <div class="">
-                                    <p class="">Электронный, на любой вид съёмки</p>
+                                <h3 class="carousel-title">Сертификат</h3>
+                                <div class="carousel-description">
+                                    <p class="carousel-text">Электронный, на любой вид съёмки</p>
                                 </div>
-                                <div class="">
-                                    <p class=""><span><small>от</small> 300&nbsp;<small>GEL</small></span>
+                                <div class="carousel-footer">
+                                    <p class="carousel-price                    "><span><small>от</small>
+                                            300&nbsp;<small>GEL</small></span>
                                     </p>
                                     <a class="btn"
                                        href="#contacts"
@@ -238,8 +251,8 @@
         <section id="booking">
             <div class="container">
                 <h2 class="title">
-                    <span class="">Как</span>
-                    <em class="">записаться</em>
+                    <span class="title__primary">Как</span>
+                    <em class="title__secondary">записаться</em>
                 </h2>
             </div>
             <ol class="steps">
@@ -272,10 +285,11 @@
         <section id="results">
             <div class="container">
                 <h2 class="title">
-                    <span class="">После съёмки</span>
-                    <em class="">вы получите</em>
+                    <span class="title__primary">После съёмки</span>
+                    <em class="title__secondary">вы получите</em>
                 </h2>
-                <p class="">Готовые фото придут ссылкой на галерею, где они хранятся месяц. Ретушь лёгкая: я не меняю
+                <p class="description">Готовые фото придут ссылкой на галерею, где они хранятся месяц. Ретушь лёгкая: я
+                    не меняю
                     фигуру и лицо, убираю только временные дефекты кожи.</p>
                 <a href="terms/">Что входит в съёмку</a>
                 <div class="photo"></div>
@@ -296,8 +310,8 @@
         <section id="portfolio">
             <div class="container">
                 <h2 class="title">
-                    <span class="">Моё</span>
-                    <em class="">видение</em>
+                    <span class="title__primary">Моё</span>
+                    <em class="title__secondary">видение</em>
                 </h2>
                 <a class=""
                    href="works/">
