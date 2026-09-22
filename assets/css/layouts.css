@@ -42,6 +42,14 @@
         padding-block: var(--section-y);
     }
 
+    .section__head {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: var(--space-5);
+        margin-bottom: var(--head-gap);
+    }
+
     /* for dark bg on section */
     .section--inverse {
         padding-block: var(--section-y-dark);
