@@ -547,6 +547,13 @@
 
     .work-card__photo {
         aspect-ratio: 1 / 1;
+        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+        transition: filter 2s ease;
+        -webkit-transition: filter 2s ease;
+        -moz-transition: filter 2s ease;
+        -ms-transition: filter 2s ease;
+        -o-transition: filter 2s ease;
     }
 
     .work-card__photo::after {
@@ -564,7 +571,6 @@
     .work-card__info {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
         gap: var(--space-4);
         margin-top: var(--space-4);
     }
@@ -579,11 +585,14 @@
         font-size: var(--fs-number-l);
         font-weight: 300;
         line-height: 1;
+        align-self: center;
     }
 
     @media (hover: hover) {
-        .work-card:hover .work-card__photo::after {
-            background: rgba(0, 0, 0, .15);
+        .work-card:hover .work-card__photo {
+            filter: grayscale(0);
+            -webkit-filter: grayscale(0);
+            transition: filter 0.15s ease;
         }
     }
 }
