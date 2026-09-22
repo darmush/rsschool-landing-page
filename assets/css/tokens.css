@@ -61,6 +61,40 @@
 
     }
 
+    @media (min-width: 481px) {
+        :root {
+            --cols: 8;
+            --margin: 32px;
+            --gutter: 16px;
+            --section-y: 48px;
+            --section-y-dark: 64px;
+            --head-gap: 32px;
+            --heading-w: 360px;
+        }
+    }
+
+    @media (min-width: 769px) {
+        :root {
+            --cols: 12;
+            --gutter: 20px;
+            --section-y: 64px;
+            --section-y-dark: 80px;
+            --head-gap: 40px;
+            --heading-w: 560px;
+
+            --fs-xl: 64px;
+            --lh-xl: 1;
+            --fs-l: 48px;
+            --lh-l: 1.04;
+            --fs-m: 40px;
+            --lh-m: 1.05;
+            --fs-title: 24px;
+            --fs-number-xl: 52px;
+            --fs-number-l: 32px;
+            --fs-body-l: 20px;
+        }
+    }
+
     @media (min-width: 1200px) {
         :root {
             --margin: 48px;

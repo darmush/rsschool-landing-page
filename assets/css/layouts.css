@@ -44,10 +44,18 @@
 
     .section__head {
         display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
         gap: var(--space-5);
         margin-bottom: var(--head-gap);
+    }
+
+    @media (min-width: 481px) {
+        .section__head {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
     }
 
     /* for dark bg on section */
