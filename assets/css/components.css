@@ -244,9 +244,11 @@
     }
 
     .carousel-list {
-        display: flex;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 100%;
+        gap: var(--gutter);
         overflow-x: auto;
-        border-inline-start: var(--stroke-hairline) solid var(--ink);
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
     }
@@ -256,8 +258,25 @@
     }
 
     .carousel-list>li {
-        flex: 0 0 var(--card-w);
         scroll-snap-align: start;
+    }
+
+    @media (min-width: 680px) {
+        .carousel-list {
+            grid-auto-columns: calc((100% - var(--gutter)) / 2);
+        }
+    }
+
+    @media (min-width: 1000px) {
+        .carousel-list {
+            grid-auto-columns: calc((100% - 2 * var(--gutter)) / 3);
+        }
+    }
+
+    @media (min-width: 1360px) {
+        .carousel-list {
+            grid-auto-columns: calc((100% - 3 * var(--gutter)) / 4);
+        }
     }
 
     .carousel-card {
@@ -266,7 +285,6 @@
         height: 420px;
         padding: var(--space-5);
         border: var(--stroke-hairline) solid var(--ink);
-        border-inline-start: 0;
         transition: background .3s, color .3s;
     }
 
