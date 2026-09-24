@@ -19,56 +19,388 @@
             href="../assets/css/tokens.css">
       <link rel="stylesheet"
             href="../assets/css/base.css">
+      <link rel="stylesheet"
+            href="../assets/css/layouts.css">
+      <link rel="stylesheet"
+            href="../assets/css/components.css">
+      <link rel="stylesheet"
+            href="../assets/css/sections.css">
       <link rel="icon"
             type="image/x-icon"
             href="../favicon.ico">
+      <script src="../assets/js/theme-toggle.js"
+              defer></script>
 </head>
 
 <body id="top">
-      <header>
+
+      <svg width="0"
+           height="0"
+           style="position:absolute"
+           aria-hidden="true">
+            <symbol id="i-arrow-right"
+                    viewBox="0 0 40 12">
+                  <path d="M0 6h38M33 1l5 5-5 5"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.25" />
+            </symbol>
+            <symbol id="i-arrow-left"
+                    viewBox="0 0 40 12">
+                  <path d="M40 6H2M7 1L2 6l5 5"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.25" />
+            </symbol>
+      </svg>
+
+      <header class="header">
             <div class="container">
                   <a class="logo"
                      href="../">stekacheva</a>
-                  <nav class="navigation"
+                  <input type="checkbox"
+                         id="nav-toggle"
+                         class="nav-toggle-input"
+                         aria-label="Открыть меню">
+                  <nav class="navigation ui-caps"
                        aria-label="Основное меню">
                         <ul class="menu">
                               <li><a href="../#formats">Форматы</a></li>
                               <li><a href="../terms/">Условия</a></li>
                               <li><a href="../works/"
                                        aria-current="page">Портфолио</a></li>
-                              <li><a href="../#contacts">Контакты</a></li>
+                              <li><a href="#contacts">Контакты</a></li>
                         </ul>
                   </nav>
                   <button class="theme-toggle"
                           type="button"
+                          role="switch"
+                          aria-checked="false"
                           aria-label="Переключить тему"></button>
-                  <button class="burger"
-                          type="button"
-                          aria-label="Открыть меню"
-                          aria-expanded="false"></button>
+                  <label class="burger"
+                         for="nav-toggle"><span></span><span></span></label>
             </div>
       </header>
       <main>
-            <section id="catalog">
+            <section id="catalog"
+                     class="section">
                   <div class="container">
-                        <h1 class="">
-                              <span class="">Моё</span>
-                              <em class="">видение</em>
+                        <h1 class="title title--xl title--split">
+                              <span class="title__primary">Моё</span>
+                              <em class="title__secondary">видение</em>
                         </h1>
+                        <div class="photo"> <img src="../assets/images/works/portfolio.jpg"
+                                   alt="Ребёнок смотрит в камеру"
+                                   width="1440"
+                                   height="1916"
+                                   fetchpriority="high"></div>
+                        <p class="catalog-caption">Серии по форматам. Нажмите на фото, чтобы посмотреть всю съёмку</p>
+                  </div>
+            </section>
+
+            <section id="works"
+                     class="section">
+                  <div class="container">
+                        <nav class="work-filters"
+                             aria-label="Фильтр по форматам">
+                              <button type="button"
+                                      class="is-active">Все</button>
+                              <button type="button">Индивидуальная</button>
+                              <button type="button">Парная</button>
+                              <button type="button">Свадебная</button>
+                              <button type="button">Групповая</button>
+                        </nav>
+
+                        <ul class="work-list">
+                              <li>
+                                    <a class="work-card"
+                                       href="#">
+                                          <div class="photo work-card__photo">
+                                                <img src="../assets/images/works/individual/indiv-2/19-thumb.webp"
+                                                     alt="Девушка на фоне деревенского пейзажа"
+                                                     width="600"
+                                                     height="800"
+                                                     fetchpriority="high">
+                                          </div>
+                                          <div class="work-card__info">
+                                                <div>
+                                                      <h2 class="label">Осенний портрет</h2>
+                                                      <p class="work-card__text">Индивидуальная съёмка в поле</p>
+                                                </div>
+                                                <time class="work-card__num"
+                                                      datetime="2026-07">09 / 25</time>
+                                          </div>
+                                    </a>
+                              </li>
+                              <li>
+                                    <a class="work-card"
+                                       href="#">
+                                          <div class="photo work-card__photo">
+                                                <img src="../assets/images/works/pair/parnaya-7/01-thumb.webp"
+                                                     alt="Парень и девушка идут по старому городу в обнимку"
+                                                     width="640"
+                                                     height="800"
+                                                     fetchpriority="high">
+                                          </div>
+                                          <div class="work-card__info">
+                                                <div>
+                                                      <h2 class="label">Love story</h2>
+                                                      <p class="work-card__text">Парная съёмка в старом городе</p>
+                                                </div>
+                                                <time class="work-card__num"
+                                                      datetime="2026-06">10 / 25</time>
+                                          </div>
+                                    </a>
+                              </li>
+                              <li>
+                                    <a class="work-card"
+                                       href="#">
+                                          <div class="photo work-card__photo">
+                                                <img src="../assets/images/works/individual/indiv-6/01-thumb.webp"
+                                                     alt="Девушка на крыльце с кошкой"
+                                                     width="640"
+                                                     height="800"
+                                                     fetchpriority="high">
+                                          </div>
+                                          <div class="work-card__info">
+                                                <div>
+                                                      <h2 class="label">Портрет в саду</h2>
+                                                      <p class="work-card__text">Атмосферная индивидуальная съёмка</p>
+                                                </div>
+                                                <time class="work-card__num"
+                                                      datetime="2026-04">04 / 26</time>
+                                          </div>
+                                    </a>
+                              </li>
+                              <li>
+                                    <a class="work-card"
+                                       href="#">
+                                          <div class="photo work-card__photo">
+                                                <img src="../assets/images/works/wedding/svadebnaya-reportazh-1/18-thumb.webp"
+                                                     alt="Невеста с букетом на балконе на фоне гор"
+                                                     width="600"
+                                                     height="800"
+                                                     fetchpriority="high">
+                                          </div>
+                                          <div class="work-card__info">
+                                                <div>
+                                                      <h2 class="label">Wedding Day</h2>
+                                                      <p class="work-card__text">Свадебная фотосессия</p>
+                                                </div>
+                                                <time class="work-card__num"
+                                                      datetime="2026-03">07 / 26</time>
+                                          </div>
+                                    </a>
+                              </li>
+                              <li>
+                                    <a class="work-card"
+                                       href="#">
+                                          <div class="photo work-card__photo">
+                                                <img src="../assets/images/works/group/semeynaya-1/01-thumb.webp"
+                                                     alt="Семья на фоне моря"
+                                                     width="600"
+                                                     height="800"
+                                                     fetchpriority="high">
+                                          </div>
+                                          <div class="work-card__info">
+                                                <div>
+                                                      <h2 class="label">Выходные у моря</h2>
+                                                      <p class="work-card__text">Семейная съёмка на набережной</p>
+                                                </div>
+                                                <time class="work-card__num"
+                                                      datetime="2026-07">05 / 26</time>
+                                          </div>
+                                    </a>
+                              </li>
+                              <li>
+                                    <a class="work-card"
+                                       href="#">
+                                          <div class="photo work-card__photo">
+                                                <img src="../assets/images/works/group/semeynaya-4/03-thumb.webp"
+                                                     alt="Ребёнок на руках у женщины"
+                                                     width="600"
+                                                     height="800"
+                                                     fetchpriority="high">
+                                          </div>
+                                          <div class="work-card__info">
+                                                <div>
+                                                      <h2 class="label">Крестины</h2>
+                                                      <p class="work-card__text">Священные семейные традиции</p>
+                                                </div>
+                                                <time class="work-card__num"
+                                                      datetime="2026-06">06 / 26</time>
+                                          </div>
+                                    </a>
+                              </li>
+                              <li>
+                                    <a class="work-card"
+                                       href="#">
+                                          <div class="photo work-card__photo">
+                                                <img src="../assets/images/works/individual/indiv-1/06-thumb.webp"
+                                                     alt="Девушка в свитере и юбке"
+                                                     width="640"
+                                                     height="800"
+                                                     fetchpriority="high">
+                                          </div>
+                                          <div class="work-card__info">
+                                                <div>
+                                                      <h2 class="label">Cozy Time</h2>
+                                                      <p class="work-card__text">Осенняя индивидуальная съёмка</p>
+                                                </div>
+                                                <time class="work-card__num"
+                                                      datetime="2026-04">11 / 25</time>
+                                          </div>
+                                    </a>
+                              </li>
+                              <li>
+                                    <a class="work-card"
+                                       href="#">
+                                          <div class="photo work-card__photo">
+                                                <img src="../assets/images/works/pair/parnaya-3/01-thumb.webp"
+                                                     alt="Девушка и парень целуют собаку"
+                                                     width="600"
+                                                     height="800"
+                                                     fetchpriority="high">
+                                          </div>
+                                          <div class="work-card__info">
+                                                <div>
+                                                      <h2 class="label">Гав</h2>
+                                                      <p class="work-card__text">Фотосессия с питомцем</p>
+                                                </div>
+                                                <time class="work-card__num"
+                                                      datetime="2026-04">08 / 25</time>
+                                          </div>
+                                    </a>
+                              </li>
+                              <li>
+                                    <a class="work-card"
+                                       href="#">
+                                          <div class="photo work-card__photo">
+                                                <img src="../assets/images/works/pair/parnaya-8/06-thumb.webp"
+                                                     alt="Пара на лодке"
+                                                     width="600"
+                                                     height="800"
+                                                     fetchpriority="high">
+                                          </div>
+                                          <div class="work-card__info">
+                                                <div>
+                                                      <h2 class="label">Proposal</h2>
+                                                      <p class="work-card__text">Любовь посреди моря</p>
+                                                </div>
+                                                <time class="work-card__num"
+                                                      datetime="2026-04">07 / 26</time>
+                                          </div>
+                                    </a>
+                              </li>
+
+                              <li>
+                                    <a class="work-card"
+                                       href="#">
+                                          <div class="photo work-card__photo"> <img
+                                                     src="../assets/images/works/pair/parnaya-1/01-thumb.webp"
+                                                     alt="Девушка в корсете"
+                                                     width="640"
+                                                     height="800"
+                                                     fetchpriority="high"></div>
+                                          <div class="work-card__info">
+                                                <div>
+                                                      <h2 class="label">Винтаж</h2>
+                                                      <p class="work-card__text">Необычная свадебная съёмка</p>
+                                                </div>
+                                                <time class="work-card__num"
+                                                      datetime="2026-03">03 / 26</time>
+                                          </div>
+                                    </a>
+                              </li>
+                              <li>
+                                    <a class="work-card"
+                                       href="#">
+                                          <div class="photo work-card__photo"> <img
+                                                     src="../assets/images/works/pair/parnaya-4/09-thumb.webp"
+                                                     alt="Пара на лодке"
+                                                     width="600"
+                                                     height="800"
+                                                     fetchpriority="high"></div>
+                                          <div class="work-card__info">
+                                                <div>
+                                                      <h2 class="label">France</h2>
+                                                      <p class="work-card__text">Парная фотосессия у моря</p>
+                                                </div>
+                                                <time class="work-card__num"
+                                                      datetime="2026-03">03 / 26</time>
+                                          </div>
+                                    </a>
+                              </li>
+                        </ul>
+
+                        <button type="button"
+                                class="btn btn--outline">Показать ещё</button>
+                  </div>
+            </section>
+
+            <section id="contacts">
+                  <div class="container grid">
+                        <div class="cta-main">
+                              <h2 class="title title--m">Сохраните <em>лучший</em><br>момент вашей<br><em>истории</em> в
+                                    кадре
+                              </h2>
+                              <a class="row-link"
+                                 href="https://www.instagram.com/stekacheva.ph"
+                                 target="_blank"
+                                 rel="noopener noreferrer">
+                                    <span>Написать в директ</span>
+                                    <svg class="icon-arrow"
+                                         aria-hidden="true">
+                                          <use href="#i-arrow-right" />
+                                    </svg>
+                              </a>
+                        </div>
+                        <div class="cta-aside">
+                              <div class="cta-photos">
+                                    <div class="photo cta-photo-big">
+                                          <img src="../assets/images/main-page/cta-big.jpg"
+                                               alt="Девушка и парень обнимаются на фоне осеннего дерева"
+                                               width="1776"
+                                               height="1184"
+                                               fetchpriority="high">
+                                    </div>
+                                    <div class="photo cta-photo-small">
+                                          <img src="../assets/images/main-page/cta-small.jpg"
+                                               alt="Близкий кадр рук, которые держат друг друга"
+                                               width="1776"
+                                               height="1184"
+                                               fetchpriority="high">
+                                    </div>
+                              </div>
+                              <ul class="contact-list">
+                                    <li><a href="https://www.instagram.com/stekacheva.ph"
+                                             target="_blank"
+                                             rel="noopener noreferrer">
+                                                <span class="label-light">Инстаграм</span>
+                                                <span class="contact-list__value">@stekacheva.ph</span>
+                                          </a></li>
+                                    <li><a href="https://maps.app.goo.gl/hbPwrm5w2dgJFW3K6"
+                                             target="_blank"
+                                             rel="noopener noreferrer">
+                                                <span class="label-light">Город</span>
+                                                <span class="contact-list__value">Батуми, Грузия</span>
+                                          </a></li>
+                              </ul>
+                        </div>
                   </div>
             </section>
       </main>
-      <footer class="">
+      <footer class="footer">
             <div class="container">
-                  <ul class="">
+                  <ul class="footer-list ui-caps">
                         <li><a href="../works/"
                                  aria-current="page">Портфолио</a></li>
                         <li><a href="../#formats">Форматы</a></li>
                         <li><a href="../terms/">Условия</a></li>
-                        <li><a href="../#contacts">Контакты</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
                         <li><a href="#top">Наверх</a></li>
                   </ul>
-                  <p class="">Created by Darya Podskrebalina · <a href="https://github.com/darmush"
+                  <p class="footer-credit">Created by Darya Podskrebalina · <a href="https://github.com/darmush"
                            target="_blank"
                            rel="noopener noreferrer">
                               GitHub

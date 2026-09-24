@@ -1,0 +1,68 @@
+@layer layouts {
+    .container {
+        width: 100%;
+        max-width: calc(var(--container-max) + 2 * var(--margin));
+        margin-inline: auto;
+        padding-inline: var(--margin);
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+        column-gap: var(--gutter);
+    }
+
+    .grid>* {
+        grid-column: 1 / -1;
+    }
+
+    @media (min-width: 769px) {
+        .col-4 {
+            grid-column: span 4;
+        }
+
+        .col-5 {
+            grid-column: span 5;
+        }
+
+        .col-6 {
+            grid-column: span 6;
+        }
+
+        .col-7 {
+            grid-column: span 7;
+        }
+
+        .col-8 {
+            grid-column: span 8;
+        }
+    }
+
+    .section {
+        padding-block: var(--section-y);
+    }
+
+    .section__head {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-5);
+        margin-bottom: var(--head-gap);
+    }
+
+    @media (min-width: 481px) {
+        .section__head {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+    }
+
+    /* for dark bg on section */
+    .section--inverse {
+        padding-block: var(--section-y-dark);
+        background: var(--graphite);
+        color: var(--on-graphite);
+    }
+
+}

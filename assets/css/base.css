@@ -9,7 +9,13 @@
     html {
         -webkit-text-size-adjust: 100%;
         scroll-behavior: smooth;
-        scroll-padding-top: var(--space-5)
+        scroll-padding-top: calc(64px + var(--space-5));
+    }
+
+    @media (min-width: 769px) {
+        html {
+            scroll-padding-top: calc(72px + var(--space-5));
+        }
     }
 
     body {
@@ -63,16 +69,11 @@
         line-height: 1.45;
     }
 
-    .body-s {
-        font-size: var(--fs-body-s);
-        line-height: 1.45;
-    }
-
     .muted {
         color: var(--ink-muted);
     }
 
-    .inverse .muted {
+    .section--inverse .muted {
         color: var(--on-graphite-muted);
     }
 
@@ -92,18 +93,13 @@
         text-transform: uppercase;
     }
 
+    /* ex. caps for navigation */
     .ui-caps {
         font-size: 13px;
         line-height: 1.2;
         font-weight: 500;
         letter-spacing: .06em;
         text-transform: uppercase;
-    }
-
-    .number-l {
-        font-size: var(--fs-number-l);
-        line-height: 1;
-        font-weight: 300;
     }
 
     :focus-visible {

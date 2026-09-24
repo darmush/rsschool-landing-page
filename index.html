@@ -7,6 +7,8 @@
           content="width=device-width, initial-scale=1.0">
     <meta name="description"
           content="Фотограф Алина Стекачева в Батуми: индивидуальные, парные, семейные и свадебные съёмки. Форматы, стоимость и запись в директ.">
+    <meta name="color-scheme"
+          content="light dark">
     <title>Фотограф Алина Стекачева, Батуми</title>
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
@@ -23,9 +25,13 @@
           href="assets/css/layouts.css">
     <link rel="stylesheet"
           href="assets/css/components.css">
+    <link rel="stylesheet"
+          href="assets/css/sections.css">
     <link rel="icon"
           type="image/x-icon"
           href="favicon.ico">
+    <script src="assets/js/theme-toggle.js"
+            defer></script>
 </head>
 
 <body id="top">
@@ -54,6 +60,10 @@
         <div class="container">
             <a class="logo"
                href="./">stekacheva</a>
+            <input type="checkbox"
+                   id="nav-toggle"
+                   class="nav-toggle-input"
+                   aria-label="Открыть меню">
             <nav class="navigation ui-caps"
                  aria-label="Основное меню">
                 <ul class="menu">
@@ -65,132 +75,150 @@
             </nav>
             <button class="theme-toggle"
                     type="button"
+                    role="switch"
                     aria-checked="false"
                     aria-label="Переключить тему"></button>
-            <button class="burger"
-                    type="button"
-                    aria-label="Открыть меню"
-                    aria-expanded="false"><span></span><span></span></button>
+            <label class="burger"
+                   for="nav-toggle"><span></span><span></span></label>
 
         </div>
     </header>
     <main>
         <section id="hero">
             <div class="container">
-                <h1 class="title title--xl">
+                <h1 class="title title--xl title--offset">
                     <span class="title__primary">Кадры, к которым</span>
                     <em class="title__secondary">хочется возвращаться</em>
                 </h1>
                 <div class="hero-content">
-                    <div class="hero-text">
+                    <div class="hero-text col-4">
                         <p class="hero-description">
-                            Потому что в них остаются не платье и не поза, а море, ветер и то, как вам было
-                            хорошо в этот день.
+                            Потому что в моих фотографиях сохраняются не наряды и позирование, а море, ветер и то,
+                            как вам было хорошо в этот день.
                         </p>
                         <p class="hero-intro">
-                            Привет! Меня зовут Алина и я фотограф в Батуми.
+                            Привет! Меня зовут Алина и я&nbsp;фотограф в&nbsp;Батуми.
                         </p>
                         <a class="btn"
-                           href="#contacts">Записаться на съёмку</a>
+                           href="#contacts">Записаться на&nbsp;съёмку</a>
                     </div>
-                    <div class="photo"></div>
+                    <div class="photo">
+                        <img src="assets/images/main-page/hero.jpg"
+                             alt="Девушка в платье на фоне старинного дома"
+                             width="1776"
+                             height="1184"
+                             fetchpriority="high">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="about">
-            <div class="container">
-                <div class="">
-                    <h2 class="title">
+        <section id="about"
+                 class="section section--inverse">
+            <div class="container grid">
+                <div class="about-text">
+                    <h2 class="title title--split">
                         <span class="title__primary">Опыт, который</span>
                         <em class="title__secondary">видно в кадре</em>
                     </h2>
 
-                    <p class="about-description">Это моя профессия уже больше пяти лет. Я знаю, как показать человека
+                    <p class="about-description body-l muted">Это моя профессия уже больше пяти лет. Я знаю, как
+                        показать человека
                         красивым, и
                         результат вы увидите в каждом кадре. Подскажу как позировать и проведу по маршруту, чтобы вы не
                         думали
                         о съёмке, а наслаждались моментом.</p>
                 </div>
-                <div class="photo"></div>
+                <div class="photo">
+
+                    <img src="assets/images/main-page/about.jpg"
+                         alt="Пара лежит в обнимку на траве на фоне моря"
+                         width="1776"
+                         height="1184"
+                         fetchpriority="high">
+                </div>
             </div>
         </section>
 
-        <section id="formats">
+        <section id="formats"
+                 class="section">
             <div class="container">
-                <h2 class="title">
-                    <span class="title__primary">Форматы и</span>
-                    <em class="title__secondary">стоимость</em>
-                </h2>
-                <div class="format-controls">
-                    <span class="format-indicator">01 / 06</span>
-                    <button class="icon-btn"
-                            type="button"
-                            aria-label="Предыдущий формат"><svg class="icon-arrow"
-                             aria-hidden="true">
-                            <use href="#i-arrow-left" />
-                        </svg></button>
-                    <button class="icon-btn"
-                            type="button"
-                            aria-label="Следующий формат"><svg class="icon-arrow"
-                             aria-hidden="true">
-                            <use href="#i-arrow-right" />
-                        </svg></button>
+                <div class="section__head">
+                    <h2 class="title title--split">
+                        <span class="title__primary">Форматы и</span>
+                        <em class="title__secondary">стоимость</em>
+                    </h2>
+                    <div class="format-controls">
+                        <span class="format-indicator label-light">01 / 06</span>
+                        <button class="icon-btn"
+                                type="button"
+                                aria-label="Предыдущий формат"><svg class="icon-arrow"
+                                 aria-hidden="true">
+                                <use href="#i-arrow-left" />
+                            </svg></button>
+                        <button class="icon-btn"
+                                type="button"
+                                aria-label="Следующий формат"><svg class="icon-arrow"
+                                 aria-hidden="true">
+                                <use href="#i-arrow-right" />
+                            </svg></button>
+                    </div>
                 </div>
 
                 <div class="carousel">
                     <ul class="carousel-list">
                         <li>
-                            <article class="">
-                                <div class=""><span class="label">01</span><span>1–1,5&nbsp;ч</span></div>
+                            <article class="carousel-card">
+                                <div class="carousel-top"><span class="label">01</span><span
+                                          class="label-light">1–1,5&nbsp;ч</span></div>
                                 <h3 class="carousel-title">Индивидуальная</h3>
                                 <div class="carousel-description">
                                     <p class="carousel-text">Портрет для себя</p>
                                 </div>
                                 <div class="carousel-footer">
                                     <p class="carousel-price"><span>300&nbsp;<small>GEL</small></span></p>
-                                    <a class="btn"
+                                    <a class="btn btn--block"
                                        href="#contacts"
                                        aria-label="Записаться на индивидуальную фотосессию">Записаться</a>
                                 </div>
                             </article>
                         </li>
                         <li>
-                            <article class="">
-                                <div class=""><span class="label">02</span><span
-                                          class="carousel-duration">1–1,5&nbsp;ч</span></div>
+                            <article class="carousel-card">
+                                <div class="carousel-top"><span class="label">02</span><span
+                                          class="label-light">1–1,5&nbsp;ч</span></div>
                                 <h3 class="carousel-title">Парная</h3>
                                 <div class="carousel-description">
                                     <p class="carousel-text">Love story, с подругой, с ребёнком</p>
                                 </div>
                                 <div class="carousel-footer">
                                     <p class="carousel-price"><span>330&nbsp;<small>GEL</small></span></p>
-                                    <a class="btn"
+                                    <a class="btn btn--block"
                                        href="#contacts"
                                        aria-label="Записаться на парную фотосессию">Записаться</a>
                                 </div>
                             </article>
                         </li>
                         <li>
-                            <article class="">
-                                <div class=""><span class="label">03</span><span
-                                          class="carousel-duration">2&nbsp;ч</span></div>
+                            <article class="carousel-card">
+                                <div class="carousel-top"><span class="label">03</span><span
+                                          class="label-light">2&nbsp;ч</span></div>
                                 <h3 class="carousel-title">Свадьба для двоих</h3>
                                 <div class="carousel-description">
                                     <p class="carousel-text">Роспись, фото с гостями, прогулка вдвоём</p>
                                 </div>
                                 <div class="carousel-footer">
                                     <p class="carousel-price"><span>500&nbsp;<small>GEL</small></span></p>
-                                    <a class="btn"
+                                    <a class="btn btn--block"
                                        href="#contacts"
                                        aria-label="Записаться на свадебную фотосессию">Записаться</a>
                                 </div>
                             </article>
                         </li>
                         <li>
-                            <article class="">
-                                <div class=""><span class="label">04</span><span
-                                          class="carousel-duration">4–8&nbsp;ч</span></div>
+                            <article class="carousel-card">
+                                <div class="carousel-top"><span class="label">04</span><span
+                                          class="label-light">4–8&nbsp;ч</span></div>
                                 <h3 class="carousel-title">Свадебная репортажная</h3>
                                 <div class="carousel-description">
                                     <p class="carousel-text">Съёмка свадебного дня целиком</p>
@@ -198,40 +226,40 @@
                                 </div>
                                 <div class="carousel-footer">
                                     <p class="carousel-price"><span>По часам</span></p>
-                                    <a class="btn"
+                                    <a class="btn btn--block btn--outline"
                                        href="#contacts"
                                        aria-label="Обсудить съёмку свадьбы">Обсудить съёмку</a>
                                 </div>
                             </article>
                         </li>
                         <li>
-                            <article class="">
-                                <div class=""><span class="label">05</span><span
-                                          class="carousel-duration">1–1,5&nbsp;ч</span></div>
+                            <article class="carousel-card">
+                                <div class="carousel-top"><span class="label">05</span><span
+                                          class="label-light">1–1,5&nbsp;ч</span></div>
                                 <h3 class="carousel-title">Семейная / групповая</h3>
                                 <div class="carousel-description">
                                     <p class="carousel-text">3–5 человек</p>
                                 </div>
                                 <div class="carousel-footer">
                                     <p class="carousel-price"><span>350&nbsp;<small>GEL</small></span></p>
-                                    <a class="btn"
+                                    <a class="btn btn--block"
                                        href="#contacts"
                                        aria-label="Записаться на групповую фотосессию">Записаться</a>
                                 </div>
                             </article>
                         </li>
                         <li>
-                            <article class="">
-                                <div class=""><span class="label">06</span></div>
+                            <article class="carousel-card">
+                                <div class="carousel-top"><span class="label">06</span></div>
                                 <h3 class="carousel-title">Сертификат</h3>
                                 <div class="carousel-description">
                                     <p class="carousel-text">Электронный, на любой вид съёмки</p>
                                 </div>
                                 <div class="carousel-footer">
-                                    <p class="carousel-price                    "><span><small>от</small>
+                                    <p class="carousel-price"><span><small>от</small>
                                             300&nbsp;<small>GEL</small></span>
                                     </p>
-                                    <a class="btn"
+                                    <a class="btn btn--block"
                                        href="#contacts"
                                        aria-label="Оформить сертификат">Оформить</a>
                                 </div>
@@ -240,7 +268,7 @@
                     </ul>
                 </div>
 
-                <a class=""
+                <a class="link-arrow"
                    href="terms/">Читать условия <svg class="icon-arrow"
                          aria-hidden="true">
                         <use href="#i-arrow-right" />
@@ -248,68 +276,88 @@
             </div>
         </section>
 
-        <section id="booking">
+        <section id="booking"
+                 class="section">
             <div class="container">
-                <h2 class="title">
-                    <span class="title__primary">Как</span>
-                    <em class="title__secondary">записаться</em>
-                </h2>
+                <div class="section__head">
+                    <h2 class="title title--split">
+                        <span class="title__primary">Как</span>
+                        <em class="title__secondary">записаться</em>
+                    </h2>
+                </div>
+                <ol class="steps">
+                    <li class="steps__item">
+                        <h3 class="steps__title"><svg class="icon-arrow steps__arrow"
+                                 aria-hidden="true">
+                                <use href="#i-arrow-right" />
+                            </svg>Напишите в директ</h3>
+                        <p class="steps__text">Укажите тип съёмки, сколько вас будет и примерную дату</p>
+                    </li>
+                    <li class="steps__item">
+                        <h3 class="steps__title"><svg class="icon-arrow steps__arrow"
+                                 aria-hidden="true">
+                                <use href="#i-arrow-right" />
+                            </svg>Выберите локацию</h3>
+                        <p class="steps__text">После брони даты я пришлю файл с локациями, можно предложить свою и
+                            обсудить
+                            образы</p>
+                    </li>
+                    <li class="steps__item">
+                        <h3 class="steps__title"><svg class="icon-arrow steps__arrow"
+                                 aria-hidden="true">
+                                <use href="#i-arrow-right" />
+                            </svg>Встречаемся и снимаем</h3>
+                        <p class="steps__text">Я отправлю место и время, в день съёмки мы плавно двигаемся между
+                            локациями,
+                            а я снимаю</p>
+                    </li>
+                </ol>
             </div>
-            <ol class="steps">
-                <li class="">
-                    <h3 class=""><svg class="icon-arrow"
-                             aria-hidden="true">
-                            <use href="#i-arrow-right" />
-                        </svg>Напишите в директ</h3>
-                    <p class="">Укажите тип съёмки, сколько вас будет и примерную дату</p>
-                </li>
-                <li class="">
-                    <h3 class=""><svg class="icon-arrow"
-                             aria-hidden="true">
-                            <use href="#i-arrow-right" />
-                        </svg>Выберите локацию</h3>
-                    <p class="">После брони даты я пришлю файл с локациями, можно предложить свою и обсудить
-                        образы</p>
-                </li>
-                <li class="">
-                    <h3 class=""><svg class="icon-arrow"
-                             aria-hidden="true">
-                            <use href="#i-arrow-right" />
-                        </svg>Встречаемся и снимаем</h3>
-                    <p class="">Я отправлю место и время, в день съёмки мы плавно двигаемся между локациями,
-                        а я снимаю</p>
-                </li>
-            </ol>
         </section>
 
-        <section id="results">
-            <div class="container">
-                <h2 class="title">
-                    <span class="title__primary">После съёмки</span>
-                    <em class="title__secondary">вы получите</em>
-                </h2>
-                <p class="description">Готовые фото придут ссылкой на галерею, где они хранятся месяц. Ретушь лёгкая: я
-                    не меняю
-                    фигуру и лицо, убираю только временные дефекты кожи.</p>
-                <a href="terms/">Что входит в съёмку</a>
-                <div class="photo"></div>
-                <ul class="facts">
-                    <li class="fact"><span class="fact__num">60+</span>
-                        <p class="fact__label">кадров в цветокоррекции</p>
-                    </li>
-                    <li class="fact"><span class="fact__num">10</span>
-                        <p class="fact__label">кадров в лёгкой ретуши</p>
-                    </li>
-                    <li class="fact"><span class="fact__num">3</span>
-                        <p class="fact__label">недели до готовых фото</p>
-                    </li>
-                </ul>
+        <section id="results"
+                 class="section section--inverse">
+            <div class="container results-grid">
+                <div class="results-left">
+                    <h2 class="title title--split">
+                        <span class="title__primary">После съёмки</span>
+                        <em class="title__secondary">вы получите</em>
+                    </h2>
+                    <div class="results-text">
+                        <p class="body-l muted">Готовые фото придут ссылкой на галерею, где они хранятся месяц. Ретушь
+                            лёгкая: я
+                            не меняю
+                            фигуру и лицо, убираю только временные дефекты кожи.</p>
+                        <a class="link-underline"
+                           href="terms/">Что входит в съёмку</a>
+                    </div>
+                </div>
+                <div class="results-right">
+                    <div class="photo">
+                        <img src="assets/images/main-page/results.jpg"
+                             alt="Семья с детьми идут по полю"
+                             width="1776"
+                             height="1184"
+                             fetchpriority="high">
+                    </div>
+                    <ul class="facts">
+                        <li class="fact"><span class="fact__num">60+</span>
+                            <p class="fact__label">кадров в цветокоррекции</p>
+                        </li>
+                        <li class="fact"><span class="fact__num">10</span>
+                            <p class="fact__label">кадров в лёгкой ретуши</p>
+                        </li>
+                        <li class="fact"><span class="fact__num">3</span>
+                            <p class="fact__label">недели до готовых фото</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <section id="portfolio">
             <div class="container">
-                <h2 class="title">
+                <h2 class="title title--split">
                     <span class="title__primary">Моё</span>
                     <em class="title__secondary">видение</em>
                 </h2>
@@ -353,52 +401,69 @@
         </section>
 
         <section id="contacts">
-            <div class="container">
-                <h2 class="">Сохраните <em>лучший</em><br>момент вашей<br><em>истории</em> в кадре</h2>
-                <a href="https://www.instagram.com/stekacheva.ph"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    <span>Написать в директ</span>
-                    <svg class="icon-arrow"
-                         aria-hidden="true">
-                        <use href="#i-arrow-right" />
-                    </svg>
-                </a>
-                <div class="">
-                    <div class="photo"></div>
-                    <div class="photo"></div>
+            <div class="container grid">
+                <div class="cta-main">
+                    <h2 class="title title--m">Сохраните <em>лучший</em><br>момент вашей<br><em>истории</em> в кадре
+                    </h2>
+                    <a class="row-link"
+                       href="https://www.instagram.com/stekacheva.ph"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <span>Написать в директ</span>
+                        <svg class="icon-arrow"
+                             aria-hidden="true">
+                            <use href="#i-arrow-right" />
+                        </svg>
+                    </a>
                 </div>
-                <ul class="contact-list">
-                    <li><a href="https://www.instagram.com/stekacheva.ph"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            <span class="label">01.</span>
-                            <span class="">Инстаграм</span>
-                            <span class="">@stekacheva.ph</span>
-                        </a></li>
-                    <li><a href="https://maps.app.goo.gl/hbPwrm5w2dgJFW3K6"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            <span class="label">02.</span>
-                            <span class="">Город</span>
-                            <span class="">Батуми, Грузия</span>
-                        </a></li>
-                </ul>
+                <div class="cta-aside">
+                    <div class="cta-photos">
+                        <div class="photo cta-photo-big">
+                            <img src="assets/images/main-page/cta-big.jpg"
+                                 alt="Девушка и парень обнимаются на фоне осеннего дерева"
+                                 width="1776"
+                                 height="1184"
+                                 fetchpriority="high">
+                        </div>
+                        <div class="photo cta-photo-small">
+
+                            <img src="assets/images/main-page/cta-small.jpg"
+                                 alt="Близкий кадр рук, которые держат друг друга"
+                                 width="1776"
+                                 height="1184"
+                                 fetchpriority="high">
+                        </div>
+                    </div>
+                    <ul class="contact-list">
+                        <li><a href="https://www.instagram.com/stekacheva.ph"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                <span class="label-light">Инстаграм</span>
+                                <span class="contact-list__value">@stekacheva.ph</span>
+                            </a></li>
+                        <li><a href="https://maps.app.goo.gl/hbPwrm5w2dgJFW3K6"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                <span class="label-light">Город</span>
+                                <span class="contact-list__value">Батуми, Грузия</span>
+                            </a></li>
+                    </ul>
+                </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="">
+    <footer class="footer">
         <div class="container">
-            <ul class="">
+            <ul class="footer-list ui-caps">
                 <li><a href="works/">Портфолио</a></li>
                 <li><a href="#formats">Форматы</a></li>
                 <li><a href="terms/">Условия</a></li>
                 <li><a href="#contacts">Контакты</a></li>
                 <li><a href="#top">Наверх</a></li>
             </ul>
-            <p class="">Created by Darya Podskrebalina · <a href="https://github.com/darmush"
+            <p class="footer-credit">Created by Darya Podskrebalina · <a href="https://github.com/darmush"
                    target="_blank"
                    rel="noopener noreferrer">
                     GitHub
