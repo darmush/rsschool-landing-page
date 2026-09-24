@@ -201,10 +201,6 @@
         border-bottom: var(--stroke-hairline) solid var(--ink);
     }
 
-    .contact-list .label {
-        width: 32px;
-    }
-
     .contact-list__value {
         margin-inline-start: auto;
     }
@@ -665,19 +661,24 @@
 
     .work-filters {
         display: flex;
-        gap: var(--space-6);
-        overflow-x: auto;
-        scrollbar-width: none;
+        flex-wrap: wrap;
+        column-gap: var(--space-6);
+        row-gap: var(--space-3);
         border-bottom: var(--stroke-hairline) solid var(--line-soft);
+        padding-bottom: var(--space-3);
     }
 
-    .work-filters::-webkit-scrollbar {
-        display: none;
+
+    @media (min-width: 654px) {
+        .work-filters {
+            padding-bottom: 0;
+
+        }
     }
 
     .work-filters button {
         flex: none;
-        padding-bottom: var(--space-3);
+        padding-bottom: var(--space-1);
         margin-bottom: -1px;
         border: 0;
         border-bottom: var(--stroke-strong) solid transparent;
@@ -685,6 +686,12 @@
         font: inherit;
         color: var(--ink-muted);
         cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+        .work-filters button {
+            padding-bottom: var(--space-3);
+        }
     }
 
     .work-filters button.is-active {
@@ -714,14 +721,6 @@
         aspect-ratio: 1 / 1;
         filter: grayscale(1);
         transition: filter 2s ease;
-    }
-
-    .work-card__photo::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0);
-        transition: background .3s;
     }
 
     .work-card__info {
