@@ -694,7 +694,7 @@
         }
     }
 
-    .work-filters button.is-active {
+    .work-filters button[aria-pressed="true"] {
         color: var(--ink);
         border-bottom-color: var(--ink);
     }
@@ -745,7 +745,7 @@
         color: var(--ink-muted);
     }
 
-    .work-card__num {
+    .work-card__date {
         flex: none;
         font-size: var(--fs-number-l);
         font-weight: 300;

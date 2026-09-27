@@ -60,6 +60,10 @@
         max-width: 100%;
     }
 
+    [hidden] {
+        display: none !important;
+    }
+
     small {
         font-size: inherit;
     }

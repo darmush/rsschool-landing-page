@@ -1,0 +1,215 @@
+[
+    {
+        "name": "Осенний портрет",
+        "description": "Индивидуальная съёмка в поле",
+        "url": "../assets/images/works/individual/indiv-2/",
+        "cover": "../assets/images/works/individual/indiv-2/19-thumb.webp",
+        "position": "50% 65%",
+        "scale": 1,
+        "alt": "Девушка на фоне деревенского пейзажа",
+        "id": "indiv-2",
+        "date": "2025-09",
+        "location": "Поле",
+        "type": "individual",
+        "tags": [
+            "осень",
+            "портрет",
+            "природа",
+            "золотой час",
+            "женский портрет"
+        ]
+    },
+    {
+        "name": "Love story",
+        "description": "Парная съёмка в старом городе",
+        "url": "../assets/images/works/pair/parnaya-7/",
+        "cover": "../assets/images/works/pair/parnaya-7/01-thumb.webp",
+        "position": "50% 50%",
+        "scale": 1.1,
+        "alt": "Парень и девушка идут по старому городу в обнимку",
+        "id": "parnaya-7",
+        "date": "2025-10",
+        "location": "Старый город",
+        "type": "pair",
+        "tags": [
+            "love story",
+            "город",
+            "прогулка",
+            "архитектура"
+        ]
+    },
+    {
+        "name": "Портрет в саду",
+        "description": "Атмосферная индивидуальная съёмка",
+        "url": "../assets/images/works/individual/indiv-6/",
+        "cover": "../assets/images/works/individual/indiv-6/01-thumb.webp",
+        "position": "50% 100%",
+        "scale": 1,
+        "alt": "Девушка на крыльце с кошкой",
+        "id": "indiv-6",
+        "date": "2026-04",
+        "location": "Сад",
+        "type": "individual",
+        "tags": [
+            "портрет",
+            "сад",
+            "животные",
+            "атмосферная",
+            "женский портрет"
+        ]
+    },
+    {
+        "name": "Wedding Day",
+        "description": "Свадебная фотосессия",
+        "url": "../assets/images/works/wedding/svadebnaya-reportazh-1/",
+        "cover": "../assets/images/works/wedding/svadebnaya-reportazh-1/18-thumb.webp",
+        "position": "50% 75%",
+        "scale": 1,
+        "alt": "Невеста с букетом на балконе на фоне гор",
+        "id": "svadebnaya-reportazh-1",
+        "date": "2026-07",
+        "location": "",
+        "type": "wedding",
+        "tags": [
+            "свадьба",
+            "репортаж",
+            "невеста",
+            "горы"
+        ]
+    },
+    {
+        "name": "Выходные у моря",
+        "description": "Семейная съёмка на набережной",
+        "url": "../assets/images/works/group/semeynaya-1/",
+        "cover": "../assets/images/works/group/semeynaya-1/01-thumb.webp",
+        "position": "50% 50%",
+        "scale": 1,
+        "alt": "Семья на фоне моря",
+        "id": "semeynaya-1",
+        "date": "2026-05",
+        "location": "Набережная",
+        "type": "group",
+        "tags": [
+            "семья",
+            "море",
+            "дети",
+            "набережная"
+        ]
+    },
+    {
+        "name": "Крестины",
+        "description": "Священные семейные традиции",
+        "url": "../assets/images/works/group/semeynaya-4/",
+        "cover": "../assets/images/works/group/semeynaya-4/03-thumb.webp",
+        "position": "50% 20%",
+        "scale": 1.1,
+        "alt": "Ребёнок на руках у женщины",
+        "id": "semeynaya-4",
+        "date": "2026-06",
+        "location": "",
+        "type": "group",
+        "tags": [
+            "семья",
+            "крестины",
+            "дети",
+            "праздник",
+            "репортаж"
+        ]
+    },
+    {
+        "name": "Cozy Time",
+        "description": "Осенняя индивидуальная съёмка",
+        "url": "../assets/images/works/individual/indiv-1/",
+        "cover": "../assets/images/works/individual/indiv-1/06-thumb.webp",
+        "position": "50% 50%",
+        "scale": 1,
+        "alt": "Девушка в свитере и юбке",
+        "id": "indiv-1",
+        "date": "2025-11",
+        "location": "",
+        "type": "individual",
+        "tags": [
+            "осень",
+            "портрет",
+            "уют",
+            "женский портрет"
+        ]
+    },
+    {
+        "name": "Гав",
+        "description": "Фотосессия с питомцем",
+        "url": "../assets/images/works/pair/parnaya-3/",
+        "cover": "../assets/images/works/pair/parnaya-3/01-thumb.webp",
+        "position": "50% 50%",
+        "scale": 1,
+        "alt": "Девушка и парень целуют собаку",
+        "id": "parnaya-3",
+        "date": "2025-08",
+        "location": "",
+        "type": "pair",
+        "tags": [
+            "пара",
+            "животные",
+            "собака",
+            "love story"
+        ]
+    },
+    {
+        "name": "Proposal",
+        "description": "Любовь посреди моря",
+        "url": "../assets/images/works/pair/parnaya-8/",
+        "cover": "../assets/images/works/pair/parnaya-8/06-thumb.webp",
+        "position": "50% 50%",
+        "scale": 1,
+        "alt": "Пара на лодке",
+        "id": "parnaya-8",
+        "date": "2026-07",
+        "location": "Море",
+        "type": "pair",
+        "tags": [
+            "предложение",
+            "пара",
+            "море",
+            "лодка",
+            "love story"
+        ]
+    },
+    {
+        "name": "Винтаж",
+        "description": "Необычная свадебная съёмка",
+        "url": "../assets/images/works/wedding/svadebnaya-2/",
+        "cover": "../assets/images/works/wedding/svadebnaya-2/01-thumb.webp",
+        "position": "50% 100%",
+        "scale": 1,
+        "alt": "Девушка в корсете",
+        "id": "svadebnaya-2",
+        "date": "2026-03",
+        "location": "",
+        "type": "wedding",
+        "tags": [
+            "свадьба",
+            "винтаж",
+            "стилизация",
+            "образ"
+        ]
+    },
+    {
+        "name": "France",
+        "description": "Парная фотосессия у моря",
+        "url": "../assets/images/works/pair/parnaya-4/",
+        "cover": "../assets/images/works/pair/parnaya-4/09-thumb.webp",
+        "position": "50% 50%",
+        "scale": 1,
+        "alt": "Пара на лодке",
+        "id": "parnaya-4",
+        "date": "2026-03",
+        "location": "Море",
+        "type": "pair",
+        "tags": [
+            "пара",
+            "море",
+            "лодка",
+            "love story"
+        ]
+    }
+]
