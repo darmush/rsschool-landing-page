@@ -10,11 +10,14 @@
         -webkit-text-size-adjust: 100%;
         scroll-behavior: smooth;
         scroll-padding-top: calc(64px + var(--space-5));
+        scrollbar-gutter: stable;
     }
 
     @media (min-width: 769px) {
         html {
             scroll-padding-top: calc(72px + var(--space-5));
+            scrollbar-gutter: none;
+
         }
     }
 
@@ -60,13 +63,18 @@
         max-width: 100%;
     }
 
+    small {
+        font-size: inherit;
+    }
+
     [hidden] {
         display: none !important;
     }
 
-    small {
-        font-size: inherit;
+    .no-scroll {
+        overflow: hidden;
     }
+
 
     .body-l {
         font-size: var(--fs-body-l);

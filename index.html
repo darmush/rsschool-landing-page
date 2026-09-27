@@ -32,6 +32,8 @@
           href="favicon.ico">
     <script src="assets/js/theme-toggle.js"
             defer></script>
+    <script src="assets/js/burger.js"
+            defer></script>
 </head>
 
 <body id="top">
@@ -60,12 +62,9 @@
         <div class="container">
             <a class="logo"
                href="./">stekacheva</a>
-            <input type="checkbox"
-                   id="nav-toggle"
-                   class="nav-toggle-input"
-                   aria-label="Открыть меню">
             <nav class="navigation ui-caps"
-                 aria-label="Основное меню">
+                 aria-label="Основное меню"
+                 id="main-nav">
                 <ul class="menu">
                     <li><a href="#formats">Форматы</a></li>
                     <li><a href="terms/">Условия</a></li>
@@ -78,8 +77,11 @@
                     role="switch"
                     aria-checked="false"
                     aria-label="Переключить тему"></button>
-            <label class="burger"
-                   for="nav-toggle"><span></span><span></span></label>
+            <button class="burger"
+                    type="button"
+                    aria-label="Открыть меню"
+                    aria-expanded="false"
+                    aria-controls="main-nav"><span></span><span></span></button>
 
         </div>
     </header>

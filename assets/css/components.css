@@ -482,16 +482,34 @@
         }
 
         .navigation {
-            display: none;
+            display: block;
             position: fixed;
             inset: 64px 0 0 0;
             padding: var(--space-4) var(--margin);
             overflow-y: auto;
             background: var(--paper);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-12px);
+            transition:
+                transform .3s ease,
+                opacity .3s ease .1s,
+                visibility 0s linear .4s;
+
         }
 
-        .nav-toggle-input:checked~.navigation {
-            display: block;
+        .navigation.is-open {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+            transition:
+                opacity .1s ease,
+                transform .3s ease,
+                visibility 0s;
+        }
+
+        .navigation.no-transition {
+            transition: none;
         }
 
         .menu {
@@ -508,12 +526,12 @@
             text-transform: uppercase;
         }
 
-        .nav-toggle-input:checked~.burger span:nth-child(1) {
+        .burger.is-active span:nth-child(1) {
             top: 21px;
             transform: rotate(45deg);
         }
 
-        .nav-toggle-input:checked~.burger span:nth-child(2) {
+        .burger.is-active span:nth-child(2) {
             top: 21px;
             transform: rotate(-45deg);
         }

@@ -28,6 +28,8 @@
             href="../favicon.ico">
       <script src="../assets/js/theme-toggle.js"
               defer></script>
+      <script src="../assets/js/burger.js"
+              defer></script>
 </head>
 
 <body id="top">
@@ -36,7 +38,8 @@
                   <a class="logo"
                      href="../">stekacheva</a>
                   <nav class="navigation ui-caps"
-                       aria-label="Основное меню">
+                       aria-label="Основное меню"
+                       id="main-nav">
                         <ul class="menu">
                               <li><a href="../#formats">Форматы</a></li>
                               <li><a href="../terms/"
@@ -53,7 +56,8 @@
                   <button class="burger"
                           type="button"
                           aria-label="Открыть меню"
-                          aria-expanded="false"><span></span><span></span></button>
+                          aria-expanded="false"
+                          aria-controls="main-nav"><span></span><span></span></button>
             </div>
       </header>
       <main>
