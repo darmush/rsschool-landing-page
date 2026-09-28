@@ -239,22 +239,15 @@
         margin-inline-end: var(--space-4);
     }
 
+    .carousel {
+        overflow: hidden;
+    }
+
     .carousel-list {
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: 100%;
         gap: var(--gutter);
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-    }
-
-    .carousel-list::-webkit-scrollbar {
-        display: none;
-    }
-
-    .carousel-list>li {
-        scroll-snap-align: start;
     }
 
     @media (min-width: 680px) {
