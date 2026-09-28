@@ -28,10 +28,8 @@ function createCard(work, index) {
     card.querySelector('.label').textContent = work.name;
     card.querySelector('.work-card__text').textContent = work.description;
 
-    const time = card.querySelector('.work-card__date');
-    const date = formatDate(work.date);
-    time.textContent = date;
-    time.dateTime = work.date;
+    const dateEl = card.querySelector('.work-card__date');
+    dateEl.textContent = formatDate(work.date);
 
     const img = card.querySelector('img');
     img.src = work.cover;
