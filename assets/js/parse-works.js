@@ -1,3 +1,5 @@
+import { openModal } from './modal.js';
+
 const WORKS_URL = '../assets/works.json';
 const PAGE_SIZE = 4;
 
@@ -25,6 +27,7 @@ async function loadWorks() {
 function createCard(work, index) {
     const card = cardTemplate.content.firstElementChild.cloneNode(true);
 
+    card.querySelector('.work-card').dataset.id = work.id;
     card.querySelector('.label').textContent = work.name;
     card.querySelector('.work-card__text').textContent = work.description;
 
@@ -76,6 +79,17 @@ filters.addEventListener('click', (event) => {
     state.type = btn.dataset.type;
     state.visible = PAGE_SIZE;
     render();
+});
+
+list.addEventListener('click', (event) => {
+    const card = event.target.closest('.work-card');
+    if (!card) return;
+
+    const work = state.works.find(
+        (item) => item.id === card.dataset.id
+    );
+
+    if (work) openModal(work);
 });
 
 moreBtn.addEventListener('click', () => {

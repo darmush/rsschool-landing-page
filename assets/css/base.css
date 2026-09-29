@@ -16,8 +16,6 @@
     @media (min-width: 769px) {
         html {
             scroll-padding-top: calc(72px + var(--space-5));
-            scrollbar-gutter: none;
-
         }
     }
 

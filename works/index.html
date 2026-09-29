@@ -28,11 +28,7 @@
       <link rel="icon"
             type="image/x-icon"
             href="../favicon.ico">
-      <script src="../assets/js/theme-toggle.js"
-              defer></script>
-      <script src="../assets/js/burger.js"
-              defer></script>
-      <script src="../assets/js/parse-works.js"
+      <script src="../assets/js/main.js"
               type="module"></script>
 </head>
 
@@ -126,8 +122,7 @@
                         <!-- template for render cards portfolio -->
                         <template id="work-card-template">
                               <li>
-                                    <a class="work-card"
-                                       href="#">
+                                    <div class="work-card">
                                           <div class="photo work-card__photo">
                                                 <img src="#"
                                                      alt=""
@@ -142,7 +137,7 @@
                                                 </div>
                                                 <div class="work-card__date"></div>
                                           </div>
-                                    </a>
+                                    </div>
                               </li>
                         </template>
 
@@ -221,6 +216,117 @@
                         </a> · 2026</p>
             </div>
       </footer>
+
+      <dialog class="modal"
+              aria-labelledby="modal-title">
+            <template id="booking-template">
+                  <button class="modal-close"
+                          type="button"
+                          aria-label="Закрыть"></button>
+                  <div class="modal-gallery"></div>
+                  <div class="modal-content">
+                        <div class="modal-header">
+                              <h2 class="modal-title"
+                                  id="modal-title"></h2>
+                              <p class="modal-description"></p>
+                        </div>
+                        <form class="modal-form">
+                              <!-- <p class="modal-subtitle">Хочу похожую съёмку</p> -->
+
+                              <fieldset class="modal-group">
+                                    <legend class="label modal-legend">Длительность</legend>
+                                    <div class="modal-options">
+                                          <label class="modal-option">
+                                                <input class="visually-hidden"
+                                                       type="radio"
+                                                       name="duration"
+                                                       value="1"
+                                                       checked>
+                                                <span>1 час</span>
+                                          </label>
+                                          <label class="modal-option">
+                                                <input class="visually-hidden"
+                                                       type="radio"
+                                                       name="duration"
+                                                       value="2">
+                                                <span>2 часа</span>
+                                          </label>
+                                          <label class="modal-option">
+                                                <input class="visually-hidden"
+                                                       type="radio"
+                                                       name="duration"
+                                                       value="3">
+                                                <span>3 часа</span>
+                                          </label>
+                                    </div>
+                              </fieldset>
+
+                              <!-- <div class="modal-group">
+                                    <label class="visually-hidden"
+                                           for="booking-dates">Удобные даты</label>
+                                    <input class="modal-input"
+                                           id="booking-dates"
+                                           type="text"
+                                           name="dates"
+                                           placeholder="Напишите удобные даты"
+                                           autocomplete="off">
+                              </div> -->
+
+                              <fieldset class="modal-group">
+                                    <legend class="label modal-legend">Дополнительно</legend>
+                                    <div class="modal-checks">
+                                          <label class="modal-check">
+                                                <input type="checkbox"
+                                                       name="makeup">
+                                                <span>Визажист</span>
+                                          </label>
+                                          <label class="modal-check">
+                                                <input type="checkbox"
+                                                       name="secondLocation">
+                                                <span>Вторая локация</span>
+                                          </label>
+                                          <!-- <label class="modal-check">
+                                                <input type="checkbox"
+                                                       name="retouch">
+                                                <span>+10 кадров в ретуши</span>
+                                          </label> -->
+                                    </div>
+                              </fieldset>
+
+                              <div class="modal-summary">
+                                    <p class="modal-summary-row">
+                                          <span class="label-light">Стоимость</span>
+                                          <output class="modal-price"
+                                                  name="price">—</output>
+                                    </p>
+                                    <p class="modal-summary-row">
+                                          <span class="label-light">Фотографий</span>
+                                          <output class="modal-photos"
+                                                  name="photos">—</output>
+                                    </p>
+                              </div>
+
+                              <!-- <div class="modal-group">
+                                    <label class="visually-hidden"
+                                           for="booking-message">Ваше сообщение</label>
+                                    <textarea class="modal-input modal-message"
+                                              id="booking-message"
+                                              name="message"
+                                              rows="8"
+                                              readonly></textarea>
+                              </div> -->
+
+                              <a class="btn btn--block modal-send"
+                                 href="https://www.instagram.com/stekacheva.ph"
+                                 target="_blank"
+                                 rel="noopener noreferrer">Написать в директ</a>
+                              <!-- <p class="modal-status"
+                                 role="status"
+                                 hidden>Текст скопирован!</p> -->
+                        </form>
+                  </div>
+            </template>
+      </dialog>
 </body>
 
 </html>
