@@ -776,7 +776,8 @@
         max-width: none;
         max-height: calc(100dvh - 2 * var(--space-5));
         padding: 0;
-        border: var(--stroke-hairline) solid var(--ink);
+        /* 0, not removed: dialog has a default border */
+        border: 0;
         background: var(--paper);
         color: var(--ink);
         overflow-y: auto;
@@ -800,11 +801,17 @@
         outline-offset: 0;
     }
 
+    /* scrollbar hidden, scrolling still works by wheel, touchpad and swipe */
     .modal-gallery {
         display: flex;
         height: 320px;
         overflow-x: auto;
         overscroll-behavior: contain;
+        scrollbar-width: none;
+    }
+
+    .modal-gallery::-webkit-scrollbar {
+        display: none;
     }
 
     .modal-gallery img {
