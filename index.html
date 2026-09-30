@@ -30,8 +30,8 @@
     <link rel="icon"
           type="image/x-icon"
           href="favicon.ico">
-    <script src="assets/js/theme-toggle.js"
-            defer></script>
+    <script src="assets/js/main.js"
+            type="module"></script>
 </head>
 
 <body id="top">
@@ -60,12 +60,9 @@
         <div class="container">
             <a class="logo"
                href="./">stekacheva</a>
-            <input type="checkbox"
-                   id="nav-toggle"
-                   class="nav-toggle-input"
-                   aria-label="Открыть меню">
             <nav class="navigation ui-caps"
-                 aria-label="Основное меню">
+                 aria-label="Основное меню"
+                 id="main-nav">
                 <ul class="menu">
                     <li><a href="#formats">Форматы</a></li>
                     <li><a href="terms/">Условия</a></li>
@@ -78,8 +75,11 @@
                     role="switch"
                     aria-checked="false"
                     aria-label="Переключить тему"></button>
-            <label class="burger"
-                   for="nav-toggle"><span></span><span></span></label>
+            <button class="burger"
+                    type="button"
+                    aria-label="Открыть меню"
+                    aria-expanded="false"
+                    aria-controls="main-nav"><span></span><span></span></button>
 
         </div>
     </header>
@@ -106,8 +106,7 @@
                         <img src="assets/images/main-page/hero.jpg"
                              alt="Девушка в платье на фоне старинного дома"
                              width="1776"
-                             height="1184"
-                             fetchpriority="high">
+                             height="1184">
                     </div>
                 </div>
             </div>
@@ -152,13 +151,15 @@
                         <span class="format-indicator label-light">01 / 06</span>
                         <button class="icon-btn"
                                 type="button"
-                                aria-label="Предыдущий формат"><svg class="icon-arrow"
+                                aria-label="Предыдущий формат"
+                                data-btn-left><svg class="icon-arrow"
                                  aria-hidden="true">
                                 <use href="#i-arrow-left" />
                             </svg></button>
                         <button class="icon-btn"
                                 type="button"
-                                aria-label="Следующий формат"><svg class="icon-arrow"
+                                aria-label="Следующий формат"
+                                data-btn-right><svg class="icon-arrow"
                                  aria-hidden="true">
                                 <use href="#i-arrow-right" />
                             </svg></button>
@@ -337,8 +338,7 @@
                         <img src="assets/images/main-page/results.jpg"
                              alt="Семья с детьми идут по полю"
                              width="1776"
-                             height="1184"
-                             fetchpriority="high">
+                             height="1184">
                     </div>
                     <ul class="facts">
                         <li class="fact"><span class="fact__num">60+</span>
@@ -422,16 +422,14 @@
                             <img src="assets/images/main-page/cta-big.jpg"
                                  alt="Девушка и парень обнимаются на фоне осеннего дерева"
                                  width="1776"
-                                 height="1184"
-                                 fetchpriority="high">
+                                 height="1184">
                         </div>
                         <div class="photo cta-photo-small">
 
                             <img src="assets/images/main-page/cta-small.jpg"
                                  alt="Близкий кадр рук, которые держат друг друга"
                                  width="1776"
-                                 height="1184"
-                                 fetchpriority="high">
+                                 height="1184">
                         </div>
                     </div>
                     <ul class="contact-list">
